@@ -1,12 +1,12 @@
-### Git 学习笔记
+## Git 学习笔记
 
+### 基本操作
 * 1.git init 初始化本地仓库
-* 2.git add * 添加文件到仓库
+* 2.git add filename 添加文件到仓库
 * 3.git commit -m "描述说明" 提交到仓库
-* 4.git status 查看版本状态     innsertios 插入
+* 4.git status 查看版本状态     (innsertios 插入 提示)
 * 5.git diff 查看上次修改
-* 6.git add * 再次添加到版本库 我就记住啦~
-
+* 6.git add filename 再次添加到版本库 我就记住啦~
 * 7.git log 命令显示从最近到最远的提交日志  [head 表示当前版本]
 
 
@@ -16,22 +16,23 @@
 
 * 9.git reset --hard 提交名(前7位) 可以返回当前版本  注意： 在命令行窗口没关的情况下
 
-Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向append GPL：  
+* Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向append GPL   
 
-关键在于 commit id
+* 关键在于 commit id
 
 不小心把命令行窗口关了怎么办?
 
 git还是可以补救的：
 
-* 10.git reflog 记录每一次的命令 它会告诉你 “穿梭的时空变化”
+* 10.git reflog 记录每一次的命令 它会告诉你 “穿梭的时空变化” 就是提交对应的ID
 
+### 工作区和版本库
 
-工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
+* 工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库
 
-Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+* Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD
 
-我们写文件的地方叫工作区           提交的地方叫版本库（.git它是被隐藏的）    版本库： 1.暂存区     2.master分支
+我们写文件的地方叫工作区======  提交的地方叫版本库（.git它是被隐藏的） ||    版本库： 1.暂存区     2.master分支
 
 
 * git add 操作是将我们所有的修改提交到暂存区  然后git commit一次性提交到master 每次提交都有一个commit id
@@ -81,6 +82,16 @@ git reset HEAD 可以把暂存区的修改撤销掉（unstage）重新放回工�
 
 
 
+### 远程仓库
+
+注意 ： 在这之前需要先创建好ssh key 这样可以判断出 是否是本人关联而不是其他人
+
+
+* 1. 关联远程仓库  git remote add origin git@github.com:michaelliao/learngit.git  
+
+* 2. 首次推送 git push -u origin master
+
+* 3. 以后推送本地  git push origin master
 
 
 
