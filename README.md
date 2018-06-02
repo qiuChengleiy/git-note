@@ -47,7 +47,7 @@ git还是可以补救的：
 
 
 
-* 用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
+* 用git diff HEAD -- filename命令可以查看工作区和版本库里面最新版本的区别
 
 
 
