@@ -87,8 +87,8 @@ git还是可以补救的：
 注意 ： 在这之前需要先创建好ssh key 这样可以判断出 是否是本人关联而不是其他人
 
 * 添加ssh key方法:命令行输入 ssh-keygen -t rsa -C "youremail@example.com" 替换成自己的邮箱
-* 设置: 首先找到自己的githubz账号-> settings -> sshkey -> title(这里可以自己随便写) -> Key
-* key: 输入上面的命令之后 默认在/Users/用户名/.ssh 下的 id_rsa.pub,将这个文件的内容复制到github的Key内容里 点击ADD 即可
+* 设置: 首先找到自己的github账号-> settings -> sshkey -> title(这里可以自己随便写) -> Key
+* key: 输入上面的命令之后 默认在/Users/用户名/.ssh 下的 id_rsa.pub,将这个文件的内容复制到github的Key内容里 点击ADD添加 即可
 
 
 * 1. 关联远程仓库  git remote add origin git@github.com:michaelliao/learngit.git  
