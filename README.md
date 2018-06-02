@@ -97,6 +97,12 @@ git还是可以补救的：
 
 * 3. 以后推送本地  git push origin master
 
+* 4. 更新远程仓库： git pull 
+
+* 5. 推送： git push 
+
+
+
 
 
 
